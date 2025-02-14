@@ -11,6 +11,7 @@ body {
     font-family: "proxima nova light", "Helvetica Neue", Helvetica, Arial, Sans-serif;
     background-color: rgb(247, 245, 245);
     color: rgb(75, 75, 75);
+    overflow-x: hidden;
 }
 
 #header {
@@ -87,14 +88,15 @@ article {
 }
 
 #center-image {
-    background-image: url(images/my-photo.png);
+    background-image: url(images/wp-photo-of-me-removebg-preview.png);
     height: 30vw;
-    width: 75vw;
-    background-size: contain;
+    width: 23vw;
+    background-size: cover;
 }
 
 #text-left, #text-right {
     margin-top: 13vw;
+    font-size: 20px;
 }
 
 #portfolio {
@@ -158,11 +160,11 @@ article {
 }
 
 .github-link, .site-link {
-    text-decoration: none;
     color:rgb(124, 124, 124)
 }
 
 .github-link:hover, .site-link:hover {
+    text-decoration: none;
     color: rgb(58, 58, 58);
 }
 
@@ -223,6 +225,7 @@ article {
 .input-info {
     display: grid;
     grid-template-columns: 20vw 60vw;
+    align-items: center;
 
     margin: 10px 0px;
 }
@@ -275,15 +278,81 @@ footer {
 }
 
 .socials a {
-    text-decoration: none;
     color: rgb(119, 119, 119);
     padding: 0px 5px;
 }
 
 .socials a:hover {
+    text-decoration: none;
     color: rgb(89, 89, 89);
 }
 
 .socials a:active {
     color: rgb(124, 124, 124);
+}
+
+@media (max-width: 770px) {
+    #heading {
+        width: 360px;
+    }
+
+    #nav-bar {
+        visibility: hidden;
+        width: 0px;
+    }
+
+    #text-left, #text-right {
+        font-size: 12px;
+    }
+
+    #card-container {
+        display: grid;
+        grid-template-columns: 75vw;
+        row-gap: 40px;
+    }
+
+    .card .image {
+        width: 90%;
+        margin: 5px 5%;
+        height: 60vw;
+        background-size: cover;
+    }
+
+    .card p, .card a {
+        font-size: 15px;
+    }
+
+    #sections-container {
+        display: grid;
+        grid-template-columns: 80vw;
+        row-gap: 0px;
+    }
+
+    .sections {
+        width: 100%;
+    }
+
+    #get-in-touch label {
+        font-size: 12px;
+    }
+
+    footer {
+        height: 80px;
+        padding: 10px 0px;
+    }
+
+    #copyright-claims {
+        width: 100vw;
+        margin: 0px;
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .socials {
+        visibility: hidden;
+        width: 0px;
+    }
 }
